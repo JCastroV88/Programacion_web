@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conexión a Bases de Datos</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Conexión a Bases de Datos</h1>
+      <p class="centrado">
+        La columna vertebral de las aplicaciones dinámicas: cómo almacenar,
+        consultar y gestionar datos.
+      </p>
+      <div class="botones">
+      <a href="index.html" class="boton">← Volver al inicio</a>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>📌 ¿Qué es una base de datos?</h2>
+        <p>
+          Es un conjunto organizado de información que se almacena y se puede
+          recuperar fácilmente. En el desarrollo web, las bases de datos
+          permiten guardar usuarios, productos, mensajes, registros y cualquier
+          otro dato necesario.
+        </p>
+      </section>
+
+      <section>
+        <h2>🛠️ Conexión con PHP</h2>
+        <p>
+          PHP puede conectarse a bases de datos como MySQL, PostgreSQL o SQLite.
+          Las dos formas más comunes son:
+        </p>
+        <ul>
+          <li>
+            <strong>mysqli:</strong> Procedimental y orientado a objetos,
+            específica para MySQL.
+          </li>
+          <li>
+            <strong>PDO (PHP Data Objects):</strong> Más flexible, compatible
+            con múltiples sistemas de bases de datos.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🔐 Seguridad en las consultas</h2>
+        <p>
+          Es crucial proteger las consultas para evitar inyecciones SQL. Se
+          recomienda usar <strong>consultas preparadas</strong> y
+          <strong>parámetros enlazados</strong>. Ejemplo con PDO:
+        </p>
+        <pre><code>$stmt = $pdo->prepare("SELECT * FROM usuarios WHERE email = :email");
+$stmt->bindParam(':email', $correo);
+$stmt->execute();</code></pre>
+      </section>
+
+      <section>
+        <h2>🔄 Operaciones básicas (CRUD)</h2>
+        <p>Las operaciones más comunes con bases de datos son:</p>
+        <ul>
+          <li>
+            <strong>Create:</strong> Insertar nuevos registros
+            (<code>INSERT</code>).
+          </li>
+          <li><strong>Read:</strong> Consultar datos (<code>SELECT</code>).</li>
+          <li>
+            <strong>Update:</strong> Modificar información existente
+            (<code>UPDATE</code>).
+          </li>
+          <li>
+            <strong>Delete:</strong> Eliminar datos (<code>DELETE</code>).
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>⚙️ Arquitectura Cliente-Servidor</h2>
+        <p>
+          En este modelo, el servidor de base de datos responde a las peticiones
+          de los scripts PHP que actúan como cliente. La eficiencia de esta
+          relación determina el rendimiento general de la aplicación.
+        </p>
+      </section>
+
+      <section>
+        <h2>✅ Ventajas del uso de bases de datos</h2>
+        <ul>
+          <li>Organización lógica y estructurada de la información.</li>
+          <li>Acceso rápido y eficiente a grandes volúmenes de datos.</li>
+          <li>Seguridad y control de acceso mediante usuarios y permisos.</li>
+          <li>Integridad de los datos mediante llaves primarias y foráneas.</li>
+        </ul>
+      </section>
+
+      <div style="text-align: center; margin-top: 2rem">
+      <div class="botones">
+      <a href="index.html" class="boton">← Volver al inicio</a>
+      </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 | Programación Web | Conexión a Bases de Datos</p>
+    </footer>
+  </body>
+</html>

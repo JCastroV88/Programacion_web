@@ -1,0 +1,91 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+  color: #333;
+}
+header {
+  background-color: #444;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+h1{
+  font-size: 50px;
+}
+h2{
+  text-align: center;
+}
+p{
+
+  text-align: justify;
+
+}
+
+.indeximagen{
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
+    url('img/index1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.temas {
+  background-color: #b4b5ba65;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  max-width: 1300px;
+}
+
+.centrado {
+  text-align: center;
+}
+
+.botones{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px; 
+  margin-top: 2rem;
+}
+
+.boton{
+  flex: 0 1 220px;                /* Todos los botones tendrán el mismo ancho base */
+  text-align: center;
+  padding: 12px 20px;
+  background-color: #033355;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.boton:hover {
+  transform: translateY(-2px) scale(1.05);
+  background-color: #115bcb;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+.contenedor-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.contenedor-imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
